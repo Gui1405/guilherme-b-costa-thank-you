@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#1E1E1F;
+}
+div{
+    width: 200px;
+    height: 200px;
+    box-shadow: 16px 14px 20px #121212;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div::before{
+    content: "";
+    background-image: conic-gradient(
+        #F3D16C 20deg,
+        transparent 120deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+}
+
+div::after{
+    content: "Muito obrigado!";
+    width: 190px;
+    height: 190px;
+    background: #282828;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F3D16C;
+    font-size: larger;
+    letter-spacing: 0.5px;
+    box-shadow: inset 20px 20px 20px #121212;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
